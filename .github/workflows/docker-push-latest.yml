@@ -1,4 +1,4 @@
-name: Upload New Tags
+name: Docker push latest
 
 on:
   push:
