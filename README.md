@@ -9,7 +9,7 @@ that there is no official image for esm.sh.
 Run the following command to get up and running.
 
 ```sh
-docker run -p 8080:8080 ghcr.io/johnpangalos/esm-dot-sh
+docker run -p 8080:8080 -p 8088:8088 ghcr.io/johnpangalos/esm-dot-sh
 ```
 
 Then visit the [test website](http://localhost:8080/?test) to ensure everything
@@ -17,10 +17,20 @@ is running as intended.
 
 ## Adding a config
 
+Use the following `Dockerfile` with a [esm.sh config](https://github.com/esm-dev/esm.sh/blob/main/config.example.jsonc)
+in the same folder as the `Dockerfile`.
+
 ```dockerfile
 FROM ghcr.io/johnpangalos/esm-dot-sh
 ADD ./config.json /config/config.json
 CMD ["/esmd", "--config", "/config/config.json"]
+```
+
+Then run the following to start you server:
+
+```sh
+docker build -t esm-server .
+docker run -p 8080:8080 -p 8088:8088 esm-server
 ```
 
 ## How is this updated?
