@@ -37,5 +37,5 @@ USER node
 WORKDIR /
 COPY --from=build-stage /esm/bin/esmd /esmd
 
-EXPOSE 80, 443, 8080
+EXPOSE 8080
 CMD ["/esmd"]

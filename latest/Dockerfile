@@ -33,5 +33,5 @@ RUN npm i -g pnpm
 USER node
 WORKDIR /
 
-EXPOSE 80, 443, 8080
+EXPOSE 8080
 CMD ["/esmd"]
