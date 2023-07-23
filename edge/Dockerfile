@@ -5,7 +5,7 @@
 #######################################
 FROM golang:1.19-alpine AS build-stage
 
-ENV ESM_SH_COMMIT 6e1d5f0196140178963738963b2f4771d588919e
+ENV ESM_SH_COMMIT f4188298a2e679672afb1afd63ecc8faf07fbfa1
 ENV ESM_SH_GIT_URL https://github.com/esm-dev/esm.sh
 
 RUN apk add --no-cache git
