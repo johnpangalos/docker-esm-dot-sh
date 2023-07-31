@@ -1,3 +1,9 @@
+# Archival notice
+
+This repos has been archived, please use the official repository found here:
+
+https://github.com/esm-dev/esm.sh/pkgs/container/esm.sh
+
 # Docker esm.sh
 
 This is a docker container for the [esm.sh project](https://esm.sh/), with the
